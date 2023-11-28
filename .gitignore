@@ -1,5 +1,5 @@
 node_modules
 reports
-yarn-error.log
-yarn.lock
+npm-error.log
+npm.lock
 .env

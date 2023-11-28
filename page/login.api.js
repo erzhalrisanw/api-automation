@@ -1,13 +1,13 @@
 const request = require('supertest');
 const env = require('dotenv').config();
-const api = request(process.env.BASE_URL_REQRES);
+const api = request(process.env.BASE_URL);
 
-const getListUsers = (payload) =>
+const postLogin = (payload) =>
     api
-        .get('/users')
+        .post('/auth/login')
         .set('Content-Type', 'application/json')
-        .query(payload);
+        .send(payload);
 
 module.exports = {
-    getListUsers
+    postLogin
 }
